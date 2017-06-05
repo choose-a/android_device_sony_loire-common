@@ -122,9 +122,6 @@ MM_AUDIO_ENABLED_SAFX := true
 TARGET_USES_QCOM_MM_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
-# Disable dex-preoptimization
-WITH_DEXPREOPT := false
-
 # Multihal
 USE_SENSOR_MULTI_HAL := true
 
