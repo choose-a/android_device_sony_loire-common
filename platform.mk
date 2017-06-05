@@ -45,7 +45,7 @@ BOARD_USES_QCNE := true
 USE_CAMERA_STUB := true
 
 # Cryptfs
-TARGET_HW_DISK_ENCRYPTION := true
+TARGET_HW_DISK_ENCRYPTION := false
 
 # kernel
 TARGET_KERNEL_SOURCE := kernel/sony/msm8952
