@@ -150,4 +150,4 @@ include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy
 
-include device/sony/common/CommonConfigOmni.mk
+include device/sony/common/ChooseCommonConfig.mk
