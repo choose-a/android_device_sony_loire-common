@@ -30,6 +30,7 @@ BOARD_USES_QCOM_HARDWARE    := true
 TARGET_QCOM_DISPLAY_VARIANT := caf-msm8952
 TARGET_QCOM_MEDIA_VARIANT   := caf-msm8952
 TARGET_QCOM_AUDIO_VARIANT   := caf-msm8952
+TARGET_QCOM_CAMERA_VARIANT  := caf-msm8952
 
 # Fixup SELinux file labels
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
@@ -154,6 +155,9 @@ PRODUCT_PACKAGES += \
     gps.msm8952 \
     libgnsspps \
     libcurl
+
+PRODUCT_PACKAGES += \
+    camera.msm8952
 
 PRODUCT_PACKAGES += \
     flp.conf \
