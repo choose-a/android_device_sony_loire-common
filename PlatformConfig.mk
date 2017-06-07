@@ -132,6 +132,7 @@ TARGET_NO_RPC := true
 
 # Camera
 TARGET_USES_MEDIA_EXTENSIONS := true
+TARGET_TS_MAKEUP := true
 
 # BCM BT/FM
 BOARD_HAVE_BCM_FM_SYSFS := "/sys/bus/platform/drivers/bcm_ldisc/bcm_ldisc"
