@@ -21,6 +21,9 @@
     <!-- Enable HAL3 by default -->
     <bool name="config_use_hal3">true</bool>
 
+    <!-- Disable ZSL by default -->
+    <bool name="pref_camera_zsl_disabled">true</bool>
+
     <!-- Use following iso parameter.-->
     <string name="key_iso">sony-iso</string>
     <string name="key_iso_values">sony-iso-values</string>
