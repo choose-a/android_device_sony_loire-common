@@ -27,6 +27,7 @@
     <!-- Restart preview for front camera onPictureTaken -->
     <bool name="front_camera_restart_preview_onPictureTaken">true</bool>
 
+    <!-- Disable ZSL by default -->
     <bool name="pref_camera_zsl_disabled">true</bool>
 
     <!-- Use following iso parameter.-->
