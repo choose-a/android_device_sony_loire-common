@@ -5,3 +5,6 @@ persist.sys.timeadjust     u:object_r:timekeep_prop:s0
 adb.network.port.es           u:object_r:adbtcpes_prop:s0
 
 persist.keyprovd.             u:object_r:keyprovd_prop:s0
+
+semc.version.                 u:object_r:semc_version_prop:s0
+persist.tareset.notfirstboot  u:object_r:tareset_notfirstboot_prop:s0
