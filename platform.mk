@@ -151,17 +151,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8952 \
-    libgnsspps \
-    libcurl
-
-PRODUCT_PACKAGES += \
-    flp.conf \
-    gps.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf \
-    xtwifi.conf
+    gps.msm8952
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -172,12 +162,6 @@ PRODUCT_PACKAGES += \
     FMRadio \
     brcm-uim-sysfs \
     libfmjni
-
-# IPA
-PRODUCT_PACKAGES += \
-    ipacm \
-    ipacm-diag \
-    IPACM_cfg.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -205,13 +189,6 @@ PRODUCT_PACKAGES += \
 # Sensor multihal
 PRODUCT_PACKAGES += \
     sensors.msm8952
-
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    telephony-ext \
-    rcscommon \
-    rcscommon.xml
 
 # Set default properties
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

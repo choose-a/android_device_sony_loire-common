@@ -557,92 +557,92 @@ service fingerprintd /system/bin/fingerprintd
     group input
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm-diag /system/vendor/bin/ipacm-diag
-    class main
-    user system
-    socket ipacm_log_file dgram 660 system net_admin
-    group net_admin qcom_diag
-    disabled
+#service ipacm-diag /system/vendor/bin/ipacm-diag
+#    class main
+#    user system
+#    socket ipacm_log_file dgram 660 system net_admin
+#    group net_admin qcom_diag
+#    disabled
+#
+#service ipacm /system/bin/ipacm
+#    class main
+#    user net_admin
+#    group net_admin inet
+#    disabled
 
-service ipacm /system/bin/ipacm
-    class main
-    user net_admin
-    group net_admin inet
-    disabled
+#service qti /system/vendor/bin/qti
+#    class main
+#    user radio
+#    group radio net_raw qcom_diag usb net_admin
+#    disabled
+#
+#service adsprpcd /system/vendor/bin/adsprpcd
+#   class main
+#   user media
+#   group media
+#   seclabel u:r:adsprpcd:s0
 
-service qti /system/vendor/bin/qti
-    class main
-    user radio
-    group radio net_raw qcom_diag usb net_admin
-    disabled
+#service imsqmidaemon /system/vendor/bin/imsqmidaemon
+#    class main
+#    user system
+#    socket ims_qmid stream 0660 system radio
+#    group radio log diag
+#    seclabel u:r:ims:s0
+#    writepid /dev/cpuset/system-background/tasks
+#
+#service imsdatadaemon /system/vendor/bin/imsdatadaemon
+#    class main
+#    user system
+#    socket ims_datad stream 0660 system radio
+#    group system wifi radio inet log diag
+#    disabled
+#    seclabel u:r:ims:s0
+#    writepid /dev/cpuset/system-background/tasks
 
-service adsprpcd /system/vendor/bin/adsprpcd
-   class main
-   user media
-   group media
-   seclabel u:r:adsprpcd:s0
+#on property:sys.ims.QMI_DAEMON_STATUS=1
+#    start imsdatadaemon
 
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
-    class main
-    user system
-    socket ims_qmid stream 0660 system radio
-    group radio log diag
-    seclabel u:r:ims:s0
-    writepid /dev/cpuset/system-background/tasks
+#service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
+#    class main
+#    user system
+#    socket ims_rtpd stream 0660 system radio
+#    group radio net_raw diag inet log
+#    seclabel u:r:ims:s0
+#    disabled
+#
+#service imscmservice /system/vendor/bin/imscmservice
+#    class main
+#    user system
+#    group radio net_raw diag diag log
+#    seclabel u:r:imscm:s0
+#    writepid /dev/cpuset/system-background/tasks
+#    disabled
+#
+#on property:sys.ims.DATA_DAEMON_STATUS=1
+#    start ims_rtp_daemon
+#    start imscmservice
 
-service imsdatadaemon /system/vendor/bin/imsdatadaemon
-    class main
-    user system
-    socket ims_datad stream 0660 system radio
-    group system wifi radio inet log diag
-    disabled
-    seclabel u:r:ims:s0
-    writepid /dev/cpuset/system-background/tasks
-
-on property:sys.ims.QMI_DAEMON_STATUS=1
-    start imsdatadaemon
-
-service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
-    class main
-    user system
-    socket ims_rtpd stream 0660 system radio
-    group radio net_raw diag inet log
-    seclabel u:r:ims:s0
-    disabled
-
-service imscmservice /system/vendor/bin/imscmservice
-    class main
-    user system
-    group radio net_raw diag diag log
-    seclabel u:r:imscm:s0
-    writepid /dev/cpuset/system-background/tasks
-    disabled
-
-on property:sys.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
-    start imscmservice
-
-service tftp_server /system/vendor/bin/tftp_server
-   class core
-   user root
-   seclabel u:r:rfs_access:s0
-   writepid /dev/cpuset/system-background/tasks
-
-# service for USERDEBUG
-service LKCore-dbg /system/vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user root
-    group root system log qcom_diag
-
-# service for USER
-service LKCore-rel /system/vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user system
-    group system log qcom_diag
+#service tftp_server /system/vendor/bin/tftp_server
+#   class core
+#   user root
+#   seclabel u:r:rfs_access:s0
+#   writepid /dev/cpuset/system-background/tasks
+#
+## service for USERDEBUG
+#service LKCore-dbg /system/vendor/bin/LKCore
+#    class late_start
+#    oneshot
+#    disabled
+#    user root
+#    group root system log qcom_diag
+#
+## service for USER
+#service LKCore-rel /system/vendor/bin/LKCore
+#    class late_start
+#    oneshot
+#    disabled
+#    user system
+#    group system log qcom_diag
 
 service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/etc/msm_irqbalance.conf
     socket msm_irqbalance seqpacket 660 root system
@@ -934,11 +934,11 @@ on property:dev.bootcomplete=1
     write /proc/sys/vm/min_free_order_shift 1
 
 # Native daemon for PacketFilter
-service apfd /system/vendor/bin/apfd
-    class main
-    socket apfd_socket stream 0660 root system
-    group system
-    seclabel u:r:apfd:s0
+#service apfd /system/vendor/bin/apfd
+#    class main
+#    socket apfd_socket stream 0660 root system
+#    group system
+#    seclabel u:r:apfd:s0
 
 # gtsconfd
 #service gtsconfd /system/vendor/bin/gtsconfd
@@ -946,22 +946,22 @@ service apfd /system/vendor/bin/apfd
 #    socket gts_socket seqpacket 0660 root system
 #    seclabel u:r:gtsconfd:s0
 
-service cnd /system/vendor/bin/cnd
-    class main
-    seclabel u:r:cnd:s0
-    socket cnd stream 660 root inet
-
-service dpmd /system/vendor/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    seclabel u:r:dpmd:s0
-    group system readproc
-
-service loc_launcher /system/vendor/bin/loc_launcher
-    #loc_launcher will start as root and set its uid to gps
-    class late_start
-    group gps inet net_raw qcom_diag net_admin wifi
-    seclabel u:r:location:s0
+#service cnd /system/vendor/bin/cnd
+#    class main
+#    seclabel u:r:cnd:s0
+#    socket cnd stream 660 root inet
+#
+#service dpmd /system/vendor/bin/dpmd
+#    class late_start
+#    socket dpmd stream 660 root system
+#    seclabel u:r:dpmd:s0
+#    group system readproc
+#
+#service loc_launcher /system/vendor/bin/loc_launcher
+#    #loc_launcher will start as root and set its uid to gps
+#    class late_start
+#    group gps inet net_raw qcom_diag net_admin wifi
+#    seclabel u:r:location:s0
 
 # Start Key Provision daemon
 service keyprovd /system/vendor/bin/keyprovd
