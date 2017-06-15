@@ -199,7 +199,8 @@ PRODUCT_PACKAGES += \
 
 # Snapdragon Camera
 PRODUCT_PACKAGES += \
-    SnapdragonCamera
+    SnapdragonCamera \
+    SnapdragonGallery
 
 # Sensor multihal
 PRODUCT_PACKAGES += \
