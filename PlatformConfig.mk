@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Platform path
-PLATFORM_COMMON_PATH := device/sony/loire
+PLATFORM_COMMON_PATH := device/sony/loire-common
 
 PRODUCT_PLATFORM := loire
 TARGET_BOARD_PLATFORM := msm8952
@@ -89,4 +89,4 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 # FPC version select
 TARGET_FPC_VERSION := N
 
-include device/sony/common/CommonConfig.mk
+include device/sony/common/ChooseCommonConfig.mk
