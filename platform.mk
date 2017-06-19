@@ -13,13 +13,15 @@
 # limitations under the License.
 
 # Platform path
-PLATFORM_COMMON_PATH := device/sony/loire
+PLATFORM_COMMON_PATH := device/sony/loire-common
 
-$(call inherit-product, device/sony/common/common.mk)
+$(call inherit-product, device/sony/common/choose_common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 SOMC_PLATFORM := loire
+
+TARGET_KERNEL_SOURCE := kernel/sony/msm
 
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
@@ -150,3 +152,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0 \
     media.stagefright.less-secure=true \
     media.stagefright.legacyencoder=true
+
+# TWRP
+$(call inherit-product, device/sony/loire-common/twrp.mk)
