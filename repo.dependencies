@@ -7,32 +7,14 @@
   },
   {
     "remote":       "choose-a",
-    "repository":   "choose-a/android_device_qcom_caf-sepolicy",
-    "target_path":  "device/qcom/sepolicy",
+    "repository":   "choose-a/android_kernel_sony_msm",
+    "target_path":  "kernel/sony/msm",
     "revision":     "choose-7.1"
   },
   {
     "remote":       "choose-a",
-    "repository":   "choose-a/android_kernel_sony_msm8952",
-    "target_path":  "kernel/sony/msm8952",
-    "revision":     "choose-7.1"
-  },
-  {
-    "remote":       "choose-a",
-    "repository":   "choose-a/android_hardware_qcom_display-caf-msm8952",
-    "target_path":  "hardware/qcom/display-caf-msm8952",
-    "revision":     "choose-7.1"
-  },
-  {
-    "remote":       "choose-a",
-    "repository":   "choose-a/android_hardware_qcom_media-caf-msm8952",
-    "target_path":  "hardware/qcom/media-caf-msm8952",
-    "revision":     "choose-7.1"
-  },
-  {
-    "remote":       "choose-a",
-    "repository":   "choose-a/android_hardware_qcom_audio-caf-msm8952",
-    "target_path":  "hardware/qcom/audio-caf-msm8952",
+    "repository":   "choose-a/android_hardware_qcom_camera",
+    "target_path":  "hardware/qcom/camera",
     "revision":     "choose-7.1"
   },
   {
