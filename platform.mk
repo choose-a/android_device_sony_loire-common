@@ -148,5 +148,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.dpc=false \
     ro.qti.sensors.wu=true
 
+# Snapdragon
+PRODUCT_PACKAGES += \
+    SnapdragonCamera \
+    SnapdragonGallery
+
 # TWRP
 # $(call inherit-product, device/sony/loire-common/twrp.mk)
