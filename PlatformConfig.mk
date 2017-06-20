@@ -85,6 +85,9 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # NFC
 NXP_CHIP_TYPE := PN547C2
 
+# Multihal
+USE_SENSOR_MULTI_HAL := true
+
 # FM definitions for Broadcom solution
 BOARD_HAVE_ALTERNATE_FM := true
 BOARD_HAVE_BCM_FM := true
