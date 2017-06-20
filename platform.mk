@@ -99,6 +99,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8952
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.msm8952
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
