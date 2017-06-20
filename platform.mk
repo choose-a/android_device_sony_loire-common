@@ -152,4 +152,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1
 
 # TWRP
-$(call inherit-product, device/sony/loire-common/twrp.mk)
+# $(call inherit-product, device/sony/loire-common/twrp.mk)
