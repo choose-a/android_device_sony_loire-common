@@ -149,4 +149,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.wu=true
 
 # TWRP
-$(call inherit-product, device/sony/loire-common/twrp.mk)
+# $(call inherit-product, device/sony/loire-common/twrp.mk)
