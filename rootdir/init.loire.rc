@@ -26,7 +26,7 @@ on fs
     write /sys/kernel/boot_adsp/boot 1
 
     # USB controller setup - required to kickstart ConfigFS
-    setprop sys.usb.controller 86000c8.android_usb
+    setprop sys.usb.controller msm_hsusb
 
 on boot
     # WLAN and BT MAC
