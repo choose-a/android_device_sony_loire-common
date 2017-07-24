@@ -155,5 +155,3 @@ PRODUCT_PACKAGES += \
     SnapdragonCamera \
     SnapdragonGallery
 
-# TWRP
-# $(call inherit-product, device/sony/loire-common/twrp.mk)
