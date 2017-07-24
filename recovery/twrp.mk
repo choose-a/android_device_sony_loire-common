@@ -5,6 +5,8 @@
 # user interface
 TW_THEME := portrait_hdpi
 TW_NO_SCREEN_BLANK := true
+TW_NEW_ION_HEAP := true
+TW_TARGET_USES_QCOM_BSP := true
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
