@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import init.common.rc
-import init.common.usb.rc
+import init.common.usb-legacy.rc
 import init.loire.pwr.rc
 
 on fs
@@ -24,9 +24,6 @@ on fs
 
     restorecon_recursive /persist
     write /sys/kernel/boot_adsp/boot 1
-
-    # USB controller setup - required to kickstart ConfigFS
-    setprop sys.usb.controller msm_hsusb
 
 on boot
     # WLAN and BT MAC
@@ -150,14 +147,6 @@ service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/etc/msm_irqb
     class core
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
-
-# brcm-uim-sysfs (BT/FM/ANT+)
-service uim /system/bin/brcm-uim-sysfs
-    class late_start
-    user root
-    group bluetooth net_bt_admin net_bt
-    seclabel u:r:uim:s0
     writepid /dev/cpuset/system-background/tasks
 
 on property:vold.post_fs_data_done=1
