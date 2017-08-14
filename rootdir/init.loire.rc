@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import init.common.rc
-import init.common.usb-legacy.rc
+import init.common.usb.rc
 import init.loire.pwr.rc
 
 on init
@@ -27,6 +27,9 @@ on fs
 
     restorecon_recursive /persist
     write /sys/kernel/boot_adsp/boot 1
+
+    # USB controller setup - required to kickstart ConfigFS
+    setprop sys.usb.controller msm_hsusb
 
 on boot
     # WLAN and BT MAC
