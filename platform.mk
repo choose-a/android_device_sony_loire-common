@@ -152,3 +152,6 @@ PRODUCT_PACKAGES += \
     SnapdragonCamera \
     SnapdragonGallery
 
+# USB controller setup
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.controller=msm_hsusb
