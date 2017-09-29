@@ -134,11 +134,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.dpc=false \
     ro.qti.sensors.wu=true
 
-# Snapdragon
-PRODUCT_PACKAGES += \
-    SnapdragonCamera \
-    SnapdragonGallery
-
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=msm_hsusb
