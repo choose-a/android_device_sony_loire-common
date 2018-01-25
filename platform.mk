@@ -150,4 +150,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=msm_hsusb \
     sys.usb.rndis.func.name=rndis_bam
 
+# WiFi MAC address path
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.wifi.addr_path=/sys/devices/soc/soc:bcmdhd_wlan/macaddr
+
 $(call inherit-product, device/sony/common/choose-a.mk)
+
