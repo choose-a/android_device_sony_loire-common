@@ -90,6 +90,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
 
+# Fluence
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.audio.fluencetype=fluence
+
 # aDSP sensors
 ## max rate
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -144,6 +148,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.gfx_ubwc_disable_=1 \
     debug.gralloc.enable_fb_ubwc=0 \
     video.disable.ubwc=1
+
+# Use MSM8956 feature set for vidc encoders
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.msm8956hw=1
 
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
