@@ -18,6 +18,7 @@ PRODUCT_PLATFORM_SOD := true
 
 TARGET_BOARD_PLATFORM := msm8952
 TARGET_KERNEL_VERSION := 4.4
+KERNEL_PATH := kernel/sony/msm-4.4
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -83,5 +84,7 @@ TARGET_LEGACY_KEYMASTER := true
 
 # Platform witout a vendor partition
 TARGET_COPY_OUT_VENDOR := system/vendor
+
+BOARD_ROOT_EXTRA_SYMLINKS := /system/vendor/lib/dsp:/dsp
 
 include device/sony/common/CommonConfig.mk
